@@ -35,7 +35,9 @@ void BitDisplay()
     for (int i = 31; i >= 0; i--) 
     {
         int num = bitField & (1 << i);
+        std::hex;
         std::cout << num;
+        std::dec;
        /* if (i % 4 == 0) {
             std::cout << " ";
         }*/
