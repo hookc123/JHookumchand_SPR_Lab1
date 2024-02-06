@@ -20,6 +20,14 @@ void Negate()
 {
     bitField= ~bitField;
 }
+void LeftShift() 
+{
+    bitField= (bitField<<1);
+}
+void RightShift() 
+{
+    bitField= (bitField>>1);
+}
 int main()
 {
     
