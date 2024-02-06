@@ -49,6 +49,29 @@ int main()
     std::cin >> bitOperation;
     std::cout << "Which index do you wish to perform this operation?" << std::endl;
     std::cin >> bit;
+    while (bitOperation!=7) {
+        switch (bitOperation) {
+        case 1:
+            TurnOn(bit);
+            break;
+        case 2:
+            TurnOff(bit);
+            break;
+        case 3:
+            Toggle(bit);
+            break;
+        case 4:
+            Negate();
+            break;
+        case 5:
+            LeftShift();
+            break;
+        case 6:
+            RightShift();
+            break;
+        }
+    }
+    BitDisplay();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
