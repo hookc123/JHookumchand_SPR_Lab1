@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-unsigned int bitField=0;
+unsigned int bitField=19;
 void TurnOn(int bit) 
 {
     bitField |= (1 << bit);
@@ -28,8 +28,14 @@ void RightShift()
 {
     bitField= (bitField>>1);
 }
+void BitDisplay()
+{
+    std::cout << "bitField: " << bitField << "\n" << std::endl;
+    std::cout <<"Bits: " << sizeof(bitField) * 8 << "\n" << std::endl;
+}
 int main()
 {
+    BitDisplay();
     int bitOperation;
     int bit;
     std::cout << "What bit operation do you wish to do?" << std::endl;
