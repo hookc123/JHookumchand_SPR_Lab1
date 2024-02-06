@@ -30,7 +30,19 @@ void RightShift()
 }
 int main()
 {
-    
+    int bitOperation;
+    int bit;
+    std::cout << "What bit operation do you wish to do?" << std::endl;
+    std::cout << "1) Turn on bit" << std::endl;
+    std::cout << "2) Turn off bit" << std::endl;
+    std::cout << "3) Toggle bit" << std::endl;
+    std::cout << "4) Negate bit" << std::endl;
+    std::cout << "5) Shift bit left" << std::endl;
+    std::cout << "6) Shift bit right" << std::endl;
+    std::cout << "7) Exit" << std::endl;
+    std::cin >> bitOperation;
+    std::cout << "Which index do you wish to perform this operation?" << std::endl;
+    std::cin >> bit;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
