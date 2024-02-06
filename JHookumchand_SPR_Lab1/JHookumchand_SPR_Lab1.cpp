@@ -31,7 +31,16 @@ void RightShift()
 void BitDisplay()
 {
     std::cout << "bitField: " << bitField << "\n" << std::endl;
-    std::cout <<"Bits: " << sizeof(bitField) * 8 << "\n" << std::endl;
+    std::cout << "Bits: ";
+    for (int i = 31; i >= 0; i--) 
+    {
+        int num = bitField & (1 << i);
+        std::cout << num;
+       /* if (i % 4 == 0) {
+            std::cout << " ";
+        }*/
+    }
+    std::cout << std::endl;
 }
 int main()
 {
@@ -47,9 +56,10 @@ int main()
     std::cout << "6) Shift bit right" << std::endl;
     std::cout << "7) Exit" << std::endl;
     std::cin >> bitOperation;
+    while (bitOperation != 7) {
     std::cout << "Which index do you wish to perform this operation?" << std::endl;
     std::cin >> bit;
-    while (bitOperation!=7) {
+    
         switch (bitOperation) {
         case 1:
             TurnOn(bit);
@@ -70,8 +80,18 @@ int main()
             RightShift();
             break;
         }
+        BitDisplay();
+        std::cout << "What bit operation do you wish to do?" << std::endl;
+        std::cout << "1) Turn on bit" << std::endl;
+        std::cout << "2) Turn off bit" << std::endl;
+        std::cout << "3) Toggle bit" << std::endl;
+        std::cout << "4) Negate bit" << std::endl;
+        std::cout << "5) Shift bit left" << std::endl;
+        std::cout << "6) Shift bit right" << std::endl;
+        std::cout << "7) Exit" << std::endl;
+        std::cin >> bitOperation;
     }
-    BitDisplay();
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
