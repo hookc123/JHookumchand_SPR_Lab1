@@ -3,11 +3,26 @@
 
 #include <iostream>
 #include <string>
-unsigned int userInput;
+unsigned int bitField=0;
+void TurnOn(int bit) 
+{
+    bitField |= (1 << bit);
+}
+void TurnOff(int bit) 
+{
+    bitField &= ~(1 << bit);
+}
+void Toggle(int bit) 
+{
+    bitField ^= (1 << bit);
+}
+void Negate() 
+{
+    bitField= ~bitField;
+}
 int main()
 {
-    std::cout << "Enter a number greater than zero:\t";
-    std::getline;
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
