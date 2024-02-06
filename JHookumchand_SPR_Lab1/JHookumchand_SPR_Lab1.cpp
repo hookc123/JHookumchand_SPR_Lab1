@@ -3,35 +3,35 @@
 
 #include <iostream>
 #include <string>
-unsigned int bitField=19;
-void TurnOn(int bit) 
+unsigned int bitField = 19;
+void TurnOn(int bit)
 {
     bitField |= (1 << bit);
 }
-void TurnOff(int bit) 
+void TurnOff(int bit)
 {
     bitField &= ~(1 << bit);
 }
-void Toggle(int bit) 
+void Toggle(int bit)
 {
     bitField ^= (1 << bit);
 }
-void Negate() 
+void Negate()
 {
-    bitField= ~bitField;
+    bitField = ~bitField;
 }
-void LeftShift() 
+void LeftShift()
 {
-    bitField= (bitField<<1);
+    bitField = (bitField << 1);
 }
-void RightShift() 
+void RightShift()
 {
-    bitField= (bitField>>1);
+    bitField = (bitField >> 1);
 }
 void BitDisplay()
 {
     std::cout << "bitField: " << bitField << "\n" << std::endl;
-    std::cout <<"Bits: " << sizeof(bitField) * 8 << "\n" << std::endl;
+    std::cout << "Bits: " << sizeof(bitField) * 8 << "\n" << std::endl;
 }
 int main()
 {
@@ -49,7 +49,7 @@ int main()
     std::cin >> bitOperation;
     std::cout << "Which index do you wish to perform this operation?" << std::endl;
     std::cin >> bit;
-    while (bitOperation!=7) {
+    while (bitOperation != 7) {
         switch (bitOperation) {
         case 1:
             TurnOn(bit);
@@ -73,6 +73,7 @@ int main()
     }
     BitDisplay();
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
