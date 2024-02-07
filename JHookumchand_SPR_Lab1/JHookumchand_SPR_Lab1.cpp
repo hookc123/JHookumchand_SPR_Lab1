@@ -32,15 +32,14 @@ void BitDisplay()
 {
     std::cout << "bitField: " << bitField << "\n" << std::endl;
     std::cout << "Bits: ";
-    for (int i = 31; i >= 0; i--) 
+    for (int i = 31; i >=0 ; i--) 
     {
-        int num = bitField & (1 << i);
-        std::hex;
-        std::cout << num;
-        std::dec;
-       /* if (i % 4 == 0) {
+        int bit = (bitField>>i)&1 ;
+        std::cout << bit;
+        if (i % 4 == 0) {
             std::cout << " ";
-        }*/
+        }
+
     }
     std::cout << std::endl;
 }
@@ -59,9 +58,11 @@ int main()
     std::cout << "7) Exit" << std::endl;
     std::cin >> bitOperation;
     while (bitOperation != 7) {
-    std::cout << "Which index do you wish to perform this operation?" << std::endl;
-    std::cin >> bit;
-    
+        if(bitOperation<=3)
+        {
+            std::cout << "Which index do you wish to perform this operation?" << std::endl;
+            std::cin >> bit;
+        }
         switch (bitOperation) {
         case 1:
             TurnOn(bit);
