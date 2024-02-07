@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <string>
-unsigned int bitField = 19;
+
+
+unsigned int bitField;
 void TurnOn(int bit)
 {
     bitField |= (1 << bit);
@@ -45,6 +47,9 @@ void BitDisplay()
 }
 int main()
 {
+     ;
+    srand(time(0));
+    bitField = rand();
     BitDisplay();
     int bitOperation;
     int bit;
