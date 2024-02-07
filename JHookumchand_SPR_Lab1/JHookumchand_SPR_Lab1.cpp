@@ -43,7 +43,7 @@ void BitDisplay()
         }
 
     }
-    std::cout << std::endl;
+    std::cout<<"\n" << std::endl;
 }
 int main()
 {
